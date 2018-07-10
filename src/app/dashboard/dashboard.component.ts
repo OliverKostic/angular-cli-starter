@@ -12,11 +12,11 @@ declare var $:any;
 export class DashboardComponent implements OnInit{
     ngOnInit(){
         var dataSales = {
-          labels: ['9:00AM', '12:00AM', '3:00PM', '6:00PM', '9:00PM', '12:00PM', '3:00AM', '6:00AM'],
+          labels: ['1/1/2018', '5/1/2018', '9/1/2018', '13/1/2018', '17/1/2018', '21/1/2018'],
           series: [
-             [287, 385, 490, 562, 594, 626, 698, 895, 952],
-            [67, 152, 193, 240, 387, 435, 535, 642, 744],
-            [23, 113, 67, 108, 190, 239, 307, 410, 410]
+             [287, 385, 490, 562, 594, 626, 698],
+            [67, 152, 193, 240, 387, 435, 535],
+            [23, 113, 67, 108, 190, 239, 307]
           ]
         };
 
@@ -102,8 +102,8 @@ export class DashboardComponent implements OnInit{
         }); */
 
         new Chartist.Bar('#chartPreferences', {
-            labels: ['1 visit', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'],
-            series: [20, 60, 120, 200, 180, 20, 10]
+            labels: ['1 visit', '2-4 visit', '5-15 visit', '16+ visit'],
+            series: [80, 120, 50, 15]
         }, {
             distributeSeries: true
         });
